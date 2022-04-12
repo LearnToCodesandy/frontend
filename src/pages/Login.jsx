@@ -20,7 +20,7 @@ const Login = () => {
         };
         if(password === repassword){
             // api call!
-            getData(signup__data,'http://localhost:8000/api/addNewUser')
+            getData(signup__data,'https://todo-app-full-stacky.herokuapp.com/api/addNewUser')
                 .then(res=>res.json())
                 .then(data=>{
                     // const new_user_id = data._id;
@@ -38,7 +38,7 @@ const Login = () => {
         const username = formdata.get('username');
         const password = formdata.get('password');
         if(username.length !==0 && password.length !== 0){
-            getData({username,password},'http://localhost:8000/api/loginUser')
+            getData({username,password},'https://todo-app-full-stacky.herokuapp.com/api/loginUser')
                 .then(res=>res.json())
                 .then(data=>{
                     const user_id = data.data._id;
