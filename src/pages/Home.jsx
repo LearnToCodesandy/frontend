@@ -23,7 +23,7 @@ const Home = () => {
   // effects
   useEffect(()=>{ 
     temp();
-  },[null])
+  })
 
   return (
     <div className="todo__wrapper">
