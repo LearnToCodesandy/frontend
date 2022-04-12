@@ -1,15 +1,14 @@
-import React, { useContext,useState, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import TodoForm from "../components/TodoForm"
 import TodoList from "../components/TodoList"
 import { TodosContext } from '../context/TodosContext';
 import {UserContext} from "../context/UserContext";
 import {getDataByGet} from "../api/getData.js";
-import SideBar from '../components/SideBar';
 
 
 const Home = () => {
-  const [todos,setTodos] = useContext(TodosContext);
-  const [user,setUser] = useContext(UserContext);
+  const [setTodos] = useContext(TodosContext);
+  const [user] = useContext(UserContext);
 
   // effects
   useEffect(()=>{
