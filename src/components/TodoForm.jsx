@@ -1,11 +1,11 @@
-import React,{useContext, useState} from 'react';
+import React,{useContext} from 'react';
 import {getData} from "../api/getData.js";
 import { TodosContext } from '../context/TodosContext.js';
 import { UserContext } from '../context/UserContext.js';
 
 const TodoForm = () => {
 const [todos,setTodos] = useContext(TodosContext);
-const [user,setUser] = useContext(UserContext);
+const [user] = useContext(UserContext);
 
   // handlers
   const handleTodo = e=>{
