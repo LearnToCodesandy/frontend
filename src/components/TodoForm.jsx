@@ -14,7 +14,7 @@ const [user,setUser] = useContext(UserContext);
     const todoContent = todoForm.get('todo');
     const todoDeadline = new Date(todoForm.get('deadline')).toDateString();
     const todoDataObj = {user_id : user.user_id, todo : todoContent,state:false,deadline : todoDeadline};
-    const todo_url = 'http://localhost:8000/api/todos/newTodo/';
+    const todo_url = 'https://todo-app-full-stacky.herokuapp.com/api/todos/newTodo/';
     getData(todoDataObj,todo_url)
       .then(res=>res.json())
       .then(todoData=>{
