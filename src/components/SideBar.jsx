@@ -5,7 +5,7 @@ const SideBar = ({user,setUser,togglsideBar,setToggleSideBar}) => {
 
   // handlers
   const handleDelete = ()=>{
-    const url = "http://localhost:8000/api/deleteUser/"+user.user_id;
+    const url = "https://todo-app-full-stacky.herokuapp.com/api/deleteUser/"+user.user_id;
     deleteAccount(url)
       .then(res=>res.json())
       .then(_=>{
