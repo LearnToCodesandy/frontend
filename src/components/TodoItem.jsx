@@ -14,11 +14,10 @@ const TodoItem = ({todo}) => {
       .then(res=>res.json())
       .then(deletedTodoItem=>{
         const filterate = todos.filter(todo=>{
-          if(deletedTodoItem.data._id !== todo._id){
-            return todo;
-          }else{
-            return;
-        })
+            if(deletedTodoItem.data._id !== todo._id){
+              return todo;
+            }
+          })
         setTodos(filterate);
       })
       .catch(err=>console.log(err))
