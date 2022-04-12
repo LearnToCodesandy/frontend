@@ -4,7 +4,7 @@ import { UserContext } from '../context/UserContext.js';
 
 const Login = () => {
     const [toggle,setToggle] = useState(true);
-    const [user,setUser] = useContext(UserContext);
+    const [setUser] = useContext(UserContext);
 
     // handlers
     const handleSignUp = (e)=>{
