@@ -10,9 +10,7 @@ const Home = () => {
   const [setTodos] = useContext(TodosContext);
   const [user] = useContext(UserContext);
 
-  // effects
-  useEffect(()=>{
-    function temp(){
+   function temp(){
       const url = 'https://todo-app-full-stacky.herokuapp.com/api/todos/getAllTodos/'+user.user_id;
     getDataByGet(url)
       .then(res=>res.json())
@@ -21,6 +19,9 @@ const Home = () => {
       })
       .catch(err=>console.log(err))
     }
+  
+  // effects
+  useEffect(()=>{ 
     temp();
   },[temp])
 
