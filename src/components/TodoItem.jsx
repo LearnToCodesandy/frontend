@@ -13,11 +13,7 @@ const TodoItem = ({todo}) => {
     deleteTodoForUser('https://todo-app-full-stacky.herokuapp.com/api/todos/deleteTodo/'+todoId)
       .then(res=>res.json())
       .then(deletedTodoItem=>{
-        const filterate = todos.filter(todo=>{
-            if(deletedTodoItem.data._id !== todo._id){
-              return todo;
-            }
-          })
+        const filterate = todos.filter(todo=> deletedTodoItem.data._id !== todo._id && todo)
         setTodos(filterate);
       })
       .catch(err=>console.log(err))
