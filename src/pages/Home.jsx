@@ -22,7 +22,7 @@ const Home = () => {
       .catch(err=>console.log(err))
     }
     temp();
-  },[])
+  },[temp])
 
   return (
     <div className="todo__wrapper">
