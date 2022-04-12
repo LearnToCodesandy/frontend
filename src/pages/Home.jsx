@@ -13,7 +13,7 @@ const Home = () => {
 
   // effects
   useEffect(()=>{
-    const url = 'http://localhost:8000/api/todos/getAllTodos/'+user.user_id;
+    const url = 'https://todo-app-full-stacky.herokuapp.com/api/todos/getAllTodos/'+user.user_id;
     getDataByGet(url)
       .then(res=>res.json())
       .then(initial__todos=>{
