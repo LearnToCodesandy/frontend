@@ -12,13 +12,16 @@ const Home = () => {
 
   // effects
   useEffect(()=>{
-    const url = 'https://todo-app-full-stacky.herokuapp.com/api/todos/getAllTodos/'+user.user_id;
+    function temp(){
+      const url = 'https://todo-app-full-stacky.herokuapp.com/api/todos/getAllTodos/'+user.user_id;
     getDataByGet(url)
       .then(res=>res.json())
       .then(initial__todos=>{
         setTodos(initial__todos.data);
       })
       .catch(err=>console.log(err))
+    }
+    temp();
   },[])
 
   return (
