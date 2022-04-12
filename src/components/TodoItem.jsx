@@ -4,7 +4,7 @@ import {deleteTodoForUser} from "../api/getData.js";
 import {updateTodoForUser} from "../api/getData.js";
 
 const TodoItem = ({todo}) => {
-  const [toggleState,setToggleState] = useState(false);
+  const [toggleState] = useState(false);
   const [todos,setTodos] = useContext(TodosContext);
 
   // handlers
@@ -16,7 +16,8 @@ const TodoItem = ({todo}) => {
         const filterate = todos.filter(todo=>{
           if(deletedTodoItem.data._id !== todo._id){
             return todo;
-          }
+          }else{
+            return;
         })
         setTodos(filterate);
       })
