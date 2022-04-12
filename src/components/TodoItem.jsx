@@ -10,7 +10,7 @@ const TodoItem = ({todo}) => {
   // handlers
   const deleteTodoNow = (id)=>{
     const todoId = id;
-    deleteTodoForUser('http://localhost:8000/api/todos/deleteTodo/'+todoId)
+    deleteTodoForUser('https://todo-app-full-stacky.herokuapp.com/api/todos/deleteTodo/'+todoId)
       .then(res=>res.json())
       .then(deletedTodoItem=>{
         const filterate = todos.filter(todo=>{
@@ -26,7 +26,7 @@ const TodoItem = ({todo}) => {
   const updateTodoNow = (todo)=>{
     const todoId = todo._id;
     todo.state = !todo.state;
-    updateTodoForUser('http://localhost:8000/api/todos/updateTodo/'+todoId,todo)
+    updateTodoForUser('https://todo-app-full-stacky.herokuapp.com/api/todos/updateTodo/'+todoId,todo)
       .then(res=>res.json())
       .then(updatedItem=>{
         const updateFilterate = todos.filter(todoItem=>{
